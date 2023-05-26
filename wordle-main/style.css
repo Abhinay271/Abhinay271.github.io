@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-size: 16px;
+    background-color: #404258;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    /* border: 5px solid green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+nav{
+    color: white;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+    height: 50px;
+    text-align: center;
+    font-size: 2rem;
+    position: absolute;
+    top: 10px;
+    width: 200px;
+}
+.gameContainer{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    /* width: 200px;
+    height: 200px; */
+    gap: 15px;
+}
+
+.gridItem{
+    border: 2px solid white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    font-family:  'Shantell Sans', cursive;
+    font-weight: bolder;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    
+}
+.gridItem:hover{
+    background-color: #50577A;
+}
+nav h3{
+    padding-top: 5px;
+}
+
+
+
+.right{
+    background-color: lightgreen;
+}
+.wrong{
+    background-color:rgb(241, 241, 166);
+    /* color: black; */
+
+}
+.empty{
+    background-color: rgb(186, 177, 177);
+}
+
+.keyboard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 15px;
+    margin-top: 40px;
+    
+}
+.keyboard p{
+    color: white;
+    border: 1px solid white;
+    /* padding: 5px; */
+    width: 25px;
+    text-align: center;
+    font-family:  'Shantell Sans', cursive;
+    border-radius: 5px;
+}
+.toprow, .homerow, .bottomrow{
+    display: flex;
+    justify-content: space-evenly;
+}
+.homerow{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.bottomrow{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.keys{
+    cursor: pointer;
+}
+@media screen and (min-width:400px){
+    .keyboard{
+        display: none;
+    }
+}
